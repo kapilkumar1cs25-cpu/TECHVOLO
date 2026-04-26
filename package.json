@@ -1,0 +1,7 @@
+{
+  "name": "TECHVOLO",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo 'Success'"
+  }
+}
