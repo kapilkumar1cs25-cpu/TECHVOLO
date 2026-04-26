@@ -28,8 +28,8 @@
         .logo-container, nav { position: relative; z-index: 2; }
         .logo-container img { height: 75px; width: 75px; border-radius: 50%; object-fit: cover; }
 
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { text-decoration: none; color: #fff; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #fff; font-weight: 700; text-transform: uppercase; transition: 0.3s; font-size: 0.9rem; }
         nav ul li a:hover { color: #ffcc00; }
 
         .marquee-container {
@@ -95,12 +95,21 @@
     <div class="bg-overlay"></div>
 
     <header>
-        <div class="logo-container"><img src="5582.jpeg" alt="Logo"></div>
-        <nav><ul><li><a href="#">Home</a></li><li><a href="#signup">Follow Us</a></li></ul></nav>
+        <div class="logo-container">
+            <img src="5582.jpeg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">AI Vision</a></li>
+                <li><a href="#">Connect</a></li>
+                <li><a href="#signup" style="color: #ffcc00;">Follow Us</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="marquee-container">
-        <div class="marquee-text">★ TECHVOLO REVOLUTION: EMPOWERING STUDENTS WITH DIRECT ACCESS TO GLOBAL AI ★</div>
+        <div class="marquee-text">★ TECHVOLO REVOLUTION: EMPOWERING STUDENTS WITH DIRECT ACCESS TO GLOBAL AI — BEYOND THE BOARDS! ★</div>
     </div>
 
     <div class="founder-section">
@@ -118,14 +127,15 @@
 
     <section class="hero">
         <h1>BEYOND THE BOARDS</h1>
+        <p style="font-size: 1.5rem; color: #ddd; margin-top: 20px;">Join the TechVolo movement today.</p>
         <a href="#signup"><button class="cta-btn">Join The Revolution</button></a>
     </section>
 
     <section class="account-section" id="signup">
-        <h2>Create Account</h2>
-        <p style="margin-bottom: 25px; color: #00d4ff;">Join the TechVolo community!</p>
+        <h2 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 10px;">Create Account</h2>
+        <p style="margin-bottom: 25px; color: #00d4ff;">Become a part of TechVolo Community</p>
         
-        <form id="followerForm" name="techvolo-followers" method="POST" data-netlify="true">
+        <form id="followerForm" name="techvolo-followers" method="POST" data-netlify="true" action="/">
             <input type="text" name="full_name" placeholder="Full Name" required>
             <input type="email" name="email_id" placeholder="Email Address" required>
             <input type="tel" name="phone_number" placeholder="Mobile Number" required>
@@ -133,18 +143,20 @@
         </form>
     </section>
 
+    <footer style="text-align: center; padding: 40px; color: #555;">
+        &copy; 2026 TechVolo | Designed by Kapil Kumar
+    </footer>
+
     <script>
         const countDisplay = document.getElementById('follower-count');
-        
-        // 1. पेज लोड होते ही पुरानी वैल्यू चेक करें
         let followers = localStorage.getItem('totalFollowers') || 100;
         countDisplay.innerText = followers + " Followers";
 
-        // 2. फॉर्म सबमिट होने पर नंबर बढ़ाएं
         document.getElementById('followerForm').addEventListener('submit', function() {
-            followers = parseInt(followers) + 1; // 1 बढ़ा दिया
-            localStorage.setItem('totalFollowers', followers); // मेमोरी में सेव किया
-            countDisplay.innerText = followers + " Followers"; // स्क्रीन पर अपडेट किया
+            followers = parseInt(followers) + 1;
+            localStorage.setItem('totalFollowers', followers);
+            countDisplay.innerText = followers + " Followers";
+            // फॉर्म सबमिट होने के बाद यह अपने आप पेज रिफ्रेश कर देगा जिससे डेटा सेव हो जाएगा
         });
     </script>
 
