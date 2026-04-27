@@ -1,203 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechVolo | Kapil Kumar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        /* 1. Main Background */
-        .bg-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('techvolo_bg.jpeg'); 
-            background-size: cover;
-            background-position: center;
-            opacity: 0.4;
-            z-index: -2;
-        }
-
-        /* 2. Premium Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 6%;
-            background-image: url('header_bg.jpeg'); 
-            background-size: cover;
-            background-position: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); 
-            z-index: 1;
-        }
-
-        .logo-container, nav { position: relative; z-index: 2; }
-
-        /* Circular Logo */
-        .logo-container img { 
-            height: 75px; 
-            width: 75px; 
-            border-radius: 50%; 
-            object-fit: cover;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover { color: #ffcc00; }
-
-        /* 3. UPDATED MARQUEE (Blue with Yellow Border) */
-        .marquee-container {
-            background: #001d3d; /* गहरा नीला */
-            border-top: 3px solid #ffcc00; /* ऊपर पीला बॉर्डर */
-            border-bottom: 3px solid #ffcc00; /* नीचे पीला बॉर्डर */
-            padding: 12px 0;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2);
-        }
-
-        .marquee-text {
-            display: inline-block;
-            white-space: nowrap;
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: #ffffff;
-            letter-spacing: 3px;
-            animation: scroll 10s linear infinite;
-        }
-
-        /* 4. Beyond The Boards (RGB Flow) */
-        .hero h1 {
-            font-size: 5.5rem;
-            margin-bottom: 20px;
-            font-weight: 900;
-            background: linear-gradient(to right, #ff7b00, #00aaff, #ffffff, #ff7b00);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: colorFlow 6s linear infinite;
-        }
-
-        @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        @keyframes colorFlow { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-
-        /* Founder Section */
-        .founder-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 25px 6%;
-            background: rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid #333;
-        }
-
-        .founder-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #ffcc00; /* पीला बॉर्डर फाउंडर इमेज पर भी */
-            object-fit: cover;
-        }
-
-        .hero { text-align: center; padding: 100px 20px; }
-        .hero p { font-size: 1.5rem; color: #ddd; margin-bottom: 40px; }
-
-        /* 5. UPDATED CTA BUTTON COLOR (Sunset Orange & Gold) */
-        .cta-btn {
-            background: linear-gradient(45deg, #ff4500, #ff8c00, #ffd700);
-            background-size: 200% auto;
-            color: #000;
-            padding: 20px 60px;
-            border-radius: 50px;
-            border: none;
-            font-weight: 900;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            box-shadow: 0 10px 25px rgba(255, 69, 0, 0.4);
-            transition: 0.4s;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.6);
-            background-position: right center; /* कलर शिफ्ट इफेक्ट */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechVolo | Kapil Kumar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-overlay"></div>
+  <div class="bg-overlay"></div>
 
-    <header>
-        <div class="logo-container">
-            <img src="5582.jpeg" alt="TechVolo Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">AI Vision</a></li>
-                <li><a href="#">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="marquee-container">
-        <div class="marquee-text">
-            ★ TECHVOLO REVOLUTION: EMPOWERING STUDENTS WITH DIRECT ACCESS TO GLOBAL AI — BEYOND THE BOARDS! ★
-        </div>
+  <header>
+    <div class="logo-container">
+      <img src="5582.jpeg" alt="TechVolo Logo">
     </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">AI Vision</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="founder-section">
-        <img src="1923.jpeg" alt="Kapil Kumar" class="founder-img">
-        <div class="founder-info">
-            <h2 style="font-size: 1.8rem;">Kapil Kumar</h2>
-            <p style="color: #ffcc00; font-weight: bold;">Founder,<span style="color: #04df00;">K.D. Jaara</span></p>
-        </div>
+  <div class="marquee-container">
+    <div class="marquee-text">
+      ★ TECHVOLO REVOLUTION: EMPOWERING STUDENTS WITH DIRECT ACCESS TO GLOBAL AI — BEYOND THE BOARDS! ★
     </div>
+  </div>
 
-    <section class="hero">
-        <h1>BEYOND THE BOARDS</h1>
-        <p>Your journey to world-class AI skills starts here. Join the TechVolo movement.</p>
-        <button class="cta-btn">Join The Revolution</button>
-    </section>
+  <div class="founder-section">
+    <img src="1933.jpeg" alt="Kapil Kumar" class="founder-img">
+    <div class="founder-info">
+      <h2>Kapil Kumar</h2>
+      <p>Founder, <span>K.D. Jaara</span></p>
+    </div>
+  </div>
 
+  <section class="hero">
+    <h1>BEYOND THE BOARDS</h1>
+    <p>Your journey to world-class AI skills starts here. Join the TechVolo movement.</p>
+    <button class="cta-btn" id="kapil-btn">linkdin</button>
+    <button class="cta-btn" id="member1-btn">instagram</button>
+    <button class="cta-btn" id="member2-btn">whatsapp </button>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
