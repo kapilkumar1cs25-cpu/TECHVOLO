@@ -5,7 +5,7 @@ document.getElementById("kapil-btn").addEventListener("click", () => {
 
 // Member 1 Instagram
 document.getElementById("member1-btn").addEventListener("click", () => {
-  window.open("https://www.instagram.com/kdjaara12/", "_blank");
+  window.open("https://www.instagram.com/invites/contact/?igsh=u6kkv8gs5vej&utm_content=a1v0t4l", "_blank");
 });
 
 // Member 2 GitHub
